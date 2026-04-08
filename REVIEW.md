@@ -27,6 +27,26 @@
 - `parseInt()` = **bồi bàn dịch** từ chuỗi sang số cho đầu bếp hiểu
 - `{ ...old, ...new }` = cầm dĩa cũ + **rưới thêm dầu**
 
+
+# REVIEW WEEK 2 - Thêm Authentication (JWT)
+
+**Ngày hoàn thành:** 08/04/2026  
+**Tác giả:** Tao (siêu lười nhưng vẫn làm được)
+
+## 1. Tao đã làm được gì?
+- Thêm **JWT Authentication** vào project cũ (chỉ có server.ts)
+- Tạo route `/auth/register` và `/auth/login`
+- Tạo `authMiddleware` để check token
+- Protect toàn bộ route `/products` (giờ thành phòng VIP)
+- Nếu đéo có token hoặc token sai → chặn ngay, trả 401
+
+## 2. Hình dung Feynman của tao (kiểu dễ nhớ)
+- JWT Token = **cái vé VIP** vào club
+- authMiddleware = **thằng bảo vệ cửa** (check vé)
+- Không có vé → "Địt mẹ mày ở ngoài đi"
+- Có vé hợp lệ → cho vô, lưu thông tin user vào `req.user`
+- /products giờ là **phòng VIP**, không phải ai cũng đéo vô được
+
 ## 3. Cách chạy (copy-paste)
 ```bash
 cd my-ecommerce
